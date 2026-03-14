@@ -469,34 +469,53 @@ Berikut widget utama yang digunakan dalam aplikasi:
 
 ## 🗂 TAMPILAN APLIKASI
 
-**1. Halaman Login**
+### 1. Halaman LoginPage
 
-- ***Tampilan Light Mode***
+#### *Tampilan Light Mode*
   
   <img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" />
 
-- ***Tampilan Dark Mode***
+#### *Tampilan Dark Mode*
   
   <img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/808be766-461f-4f77-8c72-c9f230f40a68" />
 
 <br>
 
-**2. Halaman Register**
+### 2. Halaman RegisterPage
 
-- ***Tampilan Light Mode***
+#### *Tampilan Light Mode*
 
   <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/57adebfd-af3e-488a-acd3-c6cbbfcc697c" />
 
-- ***Tampilan Dark Mode***
+#### *Tampilan Dark Mode*
 
   <img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/7abafb04-c4a5-4066-87ac-c33decc0301a" />
 
-**3. Halaman **
+### 3. Halaman HomePage
+
+#### *Tampilan Light Mode*
+
+
+#### *Tampilan Dark Mode*
+
+### 4. Add Reservation Page
+
+#### *Tampilan Light Mode*
+
+#### *Tampilan Dark Mode*
+
+### 4. Edit Reservation Page
+
+#### *Tampilan Light Mode*
+
+#### *Tampilan Dark Mode*
+
+---
 
 ## 🗂 LANGKAH - LANGKAH PENGGUNAAN APLIKASI 
 
 **1. Masuk Halaman Login**
-Apabila belum memiliki akun, pengguna dapat langsung klik "Sign Up".
+Pada saat pertama kali masuk ke aplikasi, sistem akan memuat halaman login. Apabila belum memiliki akun, pengguna dapat langsung klik "Sign Up".
 
 **2. Masuk Halaman Register**
 Kemudian, pengguna akan diarahkan ke halaman register untuk membuat akun sebagai pengguna baru. Pengguna diminta untuk mengisi kolom berupa *textfield* yaitu email, password, dan confirm password, kolom password juga dilengkapi dengan fitur show/hide password. Setelah pengguna selesai mengisi data, tekan tombol "REGISTER" untuk menyimpan data.
