@@ -15,7 +15,7 @@
 
 ---
 
-## <p align="center">🗂 DESKRIPSI APLIKASI</p>
+## 🗂 DESKRIPSI APLIKASI
 **Beauti-Fy Salon** adalah aplikasi mobile berbasis Flutter untuk mengelola reservasi layanan salon secara digital. Aplikasi ini memungkinkan pengguna melakukan pencatatan dan pengelolaan data booking secara terstruktur melalui sistem CRUD (Create, Read, Update, Delete).
 
 Pengguna dapat melakukan login dan register menggunakan ***Supabase Authentication***, kemudian menambahkan, melihat, mengedit, dan menghapus data reservasi yang tersimpan pada database Supabase. Aplikasi ini dirancang dengan navigasi multi-halaman serta antarmuka modern untuk memberikan pengalaman penggunaan yang lebih efisien dan interaktif.
@@ -76,37 +76,43 @@ Berisi seluruh halaman (screen) dalam aplikasi.
 
 
 ## 🗂 FITUR APLIKASI
-1. Authentication System
-- Register (Membuat akun baru)
-- Login (Masuk ke akun)
-- Validasi email & password
-- Notifikasi jika login/register berhasil atau gagal
 
-2. Reservation Management (CRUD)
-- Create
-  Pengguna dapat menambahkan data reservasi baru.
-- Read
-  Pengguna dapat melihat daftar seluruh reservasi yang tersimpan.
-- Update
-  Pengguna dapat mengedit data reservasi yang sudah ada.
-- Delete
-  Pengguna dapat menghapus data reservasi.
+**Aplikasi Beauti-Fy Salon** memiliki beberapa fitur utama yang terbagi ke dalam LoginPage, RegisterPage, HomePage, AddPage, dan EditPage. Pada bagian ini dijelaskan fitur-fotur yang tersedia serta bagaimana fitur tersebut diimplementasikan di dalam kode program dan integrasinya dengan Supabase.
 
-Setiap aksi Create, Update, dan Delete akan menampilkan notifikasi seperti "Data successfully created", "Data successfully updated", dan "Data successfully deleted".
+**1. LoginPage**
 
-3. Modern UI Design
-- Glassmorphism effect
-- Blur background
-- Custom gradient navbar
-- Dark mode toggle
-- Smooth animation (fade & scale)
+LoginPage merupakan halaman awal aplikasi yang berfungsi sebagai sistem autentikasi pengguna sebelum dapat mengakses fitur utama aplikasi. Halaman ini menggunakan StatefulWidget karena terdapat perubahan state seperti loading indicator dan toggle visibility password.
 
-4. Notification System
-Menggunakan SnackBar untuk memberikan feedback ke pengguna:
-- Error input
-- Success message
-- Invalid login
-- Data operation success
+Controller yang digunakan:
+
+~~~ Javascript
+final TextEditingController emailController = TextEditingController();
+final TextEditingController passwordController = TextEditingController();
+~~~
+
+Proses login dilakukan menggunakan Supabase Auth:
+
+~~~ Javascript
+await Supabase.instance.client.auth.signInWithPassword(
+  email: emailController.text.trim(),
+  password: passwordController.text.trim(),
+);
+~~~
+
+State loading dikontrol menggunakan:
+
+~~~ Javascript
+setState(() {
+  isLoading = true;
+});
+~~~
+
+Jika login berhasil:
+- Menampilkan SnackBar: "Login successful"
+- Navigasi ke HomePage menggunakan Navigator.pushReplacement
+
+Jika gagal:
+- Menampilkan pesan error menggunakan SnackBar
 
 ---
 
