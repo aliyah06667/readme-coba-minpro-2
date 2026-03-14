@@ -549,6 +549,8 @@ Begitu berhasil login, pengguna akan tiba di halaman utama atau *HomePage*. Tamp
 
 Di sini, semua reservasi yang pernah dibuat ditampilkan dalam bentuk daftar. Setiap kartu reservasi menampilkan nama pelanggan, kontak, layanan, tanggal, catatan, dan harga layanan. Pengguna bisa melihat seluruh reservasi dengan mudah dan rapi.
 
+<img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/ae99b0f8-0440-42a5-b84c-982390da0dc2" />
+
 Di HomePage, terdapat beberapa tombol aksi:
 - Tombol + untuk menambahkan reservasi baru
 - Tombol edit untuk memperbarui data reservasi
@@ -556,15 +558,57 @@ Di HomePage, terdapat beberapa tombol aksi:
 - Tombol logout untuk keluar dari akun
 
 ### 4. Menambahkan Reservasi Baru
-Saat pengguna menekan tombol +, mereka akan diarahkan ke halaman *AddPage*. Di sini, pengguna dapat mengisi form reservasi baru: nama pelanggan, kontak, layanan yang dipilih melalui dropdown, tanggal melalui DatePicker, catatan tambahan, dan harga layanan otomatis sesuai pilihan layanan. 
+Saat pengguna menekan tombol "+ Book Now" di pojok kanan bawah, 
+
+<img width="190" height="103" alt="Image" src="https://github.com/user-attachments/assets/13a4e65a-80cd-478d-91ca-40f214b7d036" />
+
+mereka akan diarahkan ke halaman *AddPage*. 
+
+<img width="1919" height="904" alt="Image" src="https://github.com/user-attachments/assets/bc7b3d3a-3e7d-4474-8192-2d7173e1d015" />
+
+Di sini, pengguna dapat mengisi form reservasi baru berisi nama pelanggan, kontak, layanan yang dipilih melalui dropdown, tanggal melalui DatePicker, catatan tambahan, dan harga layanan otomatis sesuai pilihan layanan. 
+
+- Tampilan layanan melalui dropdown
+  <img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/b5e4e8d8-a95a-4aef-b9eb-3538f18b625a" />
+
+- Tampilan tanggal melalui DatePicker
+  <img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/fc3a3305-7a58-49a5-8d79-0e31d7144ea8" />  
 
 Setelah semua data diisi, pengguna menekan tombol "BOOK APPOINTMENT". Jika berhasil, aplikasi akan menampilkan pesan “Reservation successfully created” dan kembali ke HomePage dengan daftar yang sudah diperbarui.
 
+<img width="941" height="336" alt="Image" src="https://github.com/user-attachments/assets/8e9a89c4-f3b4-486e-b6b9-412537592279" />
+
+<img width="1919" height="909" alt="Image" src="https://github.com/user-attachments/assets/dda202a2-eb45-4024-b018-13f570b6e0ca" />
+
 ### 5. Mengubah Reservasi yang Sudah Ada
-Jika ada data reservasi yang perlu diperbarui, pengguna cukup menekan tombol edit pada kartu reservasi yang bersangkutan. Aplikasi akan menampilkan form yang sudah terisi dengan data lama. Pengguna bisa mengubah informasi yang diperlukan dan menekan tombol UPDATE. Setelah berhasil, pesan “Data successfully updated” akan muncul, dan HomePage akan menampilkan data yang sudah diperbarui.
+Jika ada data reservasi yang perlu diperbarui, pengguna cukup menekan tombol edit (✏️) pada kartu reservasi yang bersangkutan. 
+
+<img width="608" height="321" alt="Image" src="https://github.com/user-attachments/assets/eb328915-39cf-44ce-b62c-b6887e606a64" />
+
+Aplikasi akan menampilkan form yang sudah terisi dengan data lama. 
+
+<img width="1919" height="905" alt="Image" src="https://github.com/user-attachments/assets/956afe5a-ee25-48cd-b6b6-6e8b70f7a3a0" />
+
+Pengguna bisa mengubah informasi yang diperlukan dan menekan tombol "UPDATE RESERVATION". 
+
+<img width="944" height="353" alt="Image" src="https://github.com/user-attachments/assets/fa2339b0-f090-4fed-b723-695a2cb2ec1c" />
+
+Setelah berhasil, pesan “Data successfully updated” akan muncul, dan HomePage akan menampilkan data yang sudah diperbarui.
+
+<img width="1919" height="906" alt="Image" src="https://github.com/user-attachments/assets/adec9577-7d2d-4e8b-a3d0-00f9a9967ac8" />
 
 ### 6. Menghapus Reservasi
-Untuk menghapus reservasi, pengguna menekan tombol delete pada kartu reservasi. Aplikasi akan menampilkan dialog konfirmasi: jika pengguna menekan Cancel, proses penghapusan dibatalkan. Jika menekan Delete, data akan dihapus dari database, muncul pesan “Data successfully deleted”, dan daftar reservasi otomatis diperbarui.
+Untuk menghapus reservasi, pengguna menekan tombol delete (🗑️) pada kartu reservasi.
+
+<img width="608" height="321" alt="Image" src="https://github.com/user-attachments/assets/eb328915-39cf-44ce-b62c-b6887e606a64" />
+
+Aplikasi akan menampilkan dialog konfirmasi jika pengguna menekan Cancel, proses penghapusan dibatalkan. 
+
+<img width="1919" height="900" alt="Image" src="https://github.com/user-attachments/assets/a9b2da0b-6e36-4b9a-ae76-47b65cf2ecef" />
+
+Jika menekan Delete, data akan dihapus dari database, muncul pesan “Data successfully deleted”, dan daftar reservasi otomatis diperbarui.
+
+<img width="1918" height="903" alt="Image" src="https://github.com/user-attachments/assets/1e8034db-46ed-4099-add8-72cbf0ed7d89" />
 
 ### 7. Mengubah Tema Tampilan
 Beauti-Fy Salon mendukung Light Mode dan Dark Mode. Pengguna dapat mengubah tema melalui tombol toggle di AppBar. Saat diganti, tampilan aplikasi akan berubah secara real-time sesuai pilihan pengguna.
