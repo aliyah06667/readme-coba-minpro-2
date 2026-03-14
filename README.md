@@ -322,25 +322,53 @@ Jika berhasil:
 - Kembali ke *HomePage*
 - Data otomatis diperbarui
 
-### 6. ReservationService (Database Layer)
+### 6. Delete Reservation
 
-File reservation_service.dart berfungsi sebagai pemisah antara UI dan database logic.
+Delete Reservation digunakan untuk menghapus data reservasi yang sudah ada dari database Supabase. Sebelum data benar-benar dihapus, sistem akan menampilkan dialog konfirmasi untuk memastikan pengguna tidak menghapus data secara tidak sengaja.
 
-Class utama:
+Dialog konfirmasi ditampilkan menggunakan:
 
 ~~~ Javascript
-class ReservationService {
-  final supabase = Supabase.instance.client;
-}
+showDialog(
+context: context,
+builder: (context) => AlertDialog(
+title: Text("Delete Confirmation"),
+content: Text("Are you sure you want to delete this reservation?"),
+actions: [
+TextButton(
+onPressed: () => Navigator.pop(context),
+child: Text("Cancel"),
+),
+TextButton(
+onPressed: () async {
+await supabase.from('reservations').delete().eq('id', id);
+Navigator.pop(context);
+},
+child: Text("Delete"),
+),
+],
+),
+);
 ~~~
 
-Berisi method:
-- `addReservation()` : Create
-- `getReservations()` : Read
-- `updateReservation()` : Update
-- `deleteReservation()` : Delete
+Jika pengguna memilih Cancel:
+- Proses penghapusan dibatalkan
+- Dialog ditutup
 
-Pendekatan ini membuat arsitektur aplikasi lebih modular dan sesuai prinsip separation of concerns.
+Jika pengguna memilih Delete:
+- Data dihapus menggunakan:
+  ~~~ Javascript
+  await supabase
+  .from('reservations')
+  .delete()
+  .eq('id', id);
+  ~~~
+
+- Jika berhasil:
+  - Menampilkan "Data successfully deleted"
+  - Dialog tertutup
+  - Kembali ke *HomePage*
+  - Data otomatis diperbarui
 
 ### 7. Dark Mode & Light Mode
 
@@ -394,62 +422,54 @@ Struktur ini menerapkan konsep separation of concerns dengan memisahkan UI dan d
 
 ---
 
-## 🗂 WIDGET YANG DIGUNAKAN
+## 🗂 WIDGET & KOMPONEN YANG DIGUNAKAN
 Berikut widget utama yang digunakan dalam aplikasi:
 
-**1. Layout & Structure**
-   - Scaffold
-   - Stack
-   - Container
-   - Column
-   - Row
-   - Center
-   - Align
-   - Positioned
-   - SizedBox
-
-2. Input & Form
-- TextField
-- TextEditingController
-- InputDecoration
-- IconButton
-
-3. Button
-- ElevatedButton
-- TextButton
-- GestureDetector
-
-4. Visual & UI Effects
-- AnimatedContainer
-- FadeTransition
-- ScaleTransition
-- BackdropFilter
-- ClipRRect
-- BoxDecoration
-- LinearGradient
-- BoxShadow
-- CircularProgressIndicator
-
-5. Navigation
-- Navigator.push
-- Navigator.pushReplacement
-- Navigator.pop
-
-6. Backend Integration
-- Supabase.instance.client.auth.signUp
-- Supabase.instance.client.auth.signInWithPassword
+| WIDGET / KOMPONEN | KETERANGAN |
+|-------------------|------------|
+| MaterialApp | Root widget aplikasi yang mengatur tema, navigasi, dan konfigurasi global aplikasi. |
+| ThemeData | Mengatur tampilan Light Mode dan Dark Mode. |
+| ThemeMode | Mengontrol perubahan tema secara dinamis. |
+| Scaffold | Struktur dasar setiap halaman seperti AppBar, body, dan FloatingActionButton. |
+| AppBar | Menampilkan judul halaman serta tombol aksi seperti logout dan toggle theme. |
+| SafeArea | Menyesuaikan tampilan agar tidak tertutup sistem UI perangkat. |
+| Column | Menyusun widget secara vertikal. |
+| Row | Menyusun widget secara horizontal. |
+| Container | Membungkus widget dan mengatur styling seperti warna dan margin. |
+| Padding | Memberikan jarak antar widget agar tampilan lebih rapi. |
+| SizedBox | Memberikan jarak atau ukuran tetap antar komponen. |
+| Center | Memposisikan widget di tengah layar. |
+| Expanded | Membuat widget menyesuaikan ruang yang tersedia. |
+| Text | Menampilkan informasi seperti nama, layanan, tanggal, dan harga. |
+| Icon | Menampilkan ikon pada field atau tombol aksi. |
+| TextField | Digunakan untuk input data seperti nama, kontak, email, password, dan catatan. |
+| TextEditingController | Mengontrol dan mengambil nilai dari TextField. |
+| DropdownButtonFormField | Digunakan untuk memilih jenis layanan salon. |
+| InputDecoration | Mengatur tampilan TextField seperti label, hint, icon, dan border. |
+| showDatePicker | Digunakan untuk memilih tanggal reservasi. |
+| Navigator.push | Berpindah ke halaman baru seperti AddPage dan EditPage. |
+| Navigator.pushReplacement | Mengganti halaman, misalnya setelah login berhasil. |
+| Navigator.pop | Kembali ke halaman sebelumnya atau menutup dialog. |
+| MaterialPageRoute | Mengatur transisi antar halaman. |
+| ListView.builder | Menampilkan daftar reservasi secara dinamis dari database Supabase. |
+| Card | Menampilkan data reservasi dalam bentuk kartu agar lebih terstruktur. |
+| ListTile | Menyusun informasi reservasi dalam satu baris rapi (jika digunakan). |
+| IconButton | Tombol aksi seperti edit dan delete. |
+| FloatingActionButton | Tombol untuk menambahkan reservasi baru. |
+| SnackBar | Menampilkan notifikasi seperti "Data successfully created", "updated", atau "deleted". |
+| ScaffoldMessenger | Mengontrol dan menampilkan SnackBar. |
+| AlertDialog | Menampilkan konfirmasi sebelum menghapus data. |
+| TextButton | Tombol pada dialog seperti Cancel dan Delete. |
+| CircularProgressIndicator | Menampilkan loading indicator saat proses async berjalan (login, register, CRUD, fetch data). |
+| StatefulWidget | Digunakan pada halaman dengan perubahan data dinamis seperti HomePage, AddPage, EditPage, LoginPage, dan RegisterPage. |
+| StatelessWidget | Digunakan pada halaman yang tidak memiliki perubahan state. |
+| setState() | Digunakan untuk memperbarui tampilan setelah terjadi perubahan data. |
 
 ---
 
 ## 🗂 TAMPILAN APLIKASI
 
 **1. Halaman Login**
-- Background image dengan overlay gradient
-- Glassmorphism login card
-- Input email & password
-- Toggle show/hide password
-- Dark mode button
-- Tombol Sign Up
 
 - ***Tampilan Light Mode***
   
@@ -475,8 +495,12 @@ Berikut widget utama yang digunakan dalam aplikasi:
 
 ## 🗂 LANGKAH - LANGKAH PENGGUNAAN APLIKASI 
 
-**1. Apabila belum memiliki akun, pengguna dapat langsung klik "Sign Up".**
+**1. Masuk Halaman Login**
+Apabila belum memiliki akun, pengguna dapat langsung klik "Sign Up".
 
-**2. Kemudian, pengguna akan diarahkan ke halaman register untuk membuat akun sebagai pengguna baru. Pengguna diminta untuk mengisi kolom berupa _textfield_ yaitu email, password, dan confirm password, kolom password juga dilengkapi dengan fitur show/hide password. Setelah pengguna selesai mengisi data, tekan tombol "REGISTER" untuk menyimpan data.**
+**2. Masuk Halaman Register**
+Kemudian, pengguna akan diarahkan ke halaman register untuk membuat akun sebagai pengguna baru. Pengguna diminta untuk mengisi kolom berupa *textfield* yaitu email, password, dan confirm password, kolom password juga dilengkapi dengan fitur show/hide password. Setelah pengguna selesai mengisi data, tekan tombol "REGISTER" untuk menyimpan data.
 
 <img width="1442" height="869" alt="image" src="https://github.com/user-attachments/assets/018a8adc-0d65-45e7-8e74-6eef0c9a0b33" />
+
+
