@@ -4,6 +4,17 @@
 
 <img width="1200" height="400" alt="beauti-fysalon img" src="https://github.com/user-attachments/assets/cfa42b6d-4117-47af-a00c-5bc3ce3750c5" />
 
+### <p align="center">Preview</p> 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" width="500"/>
+  <img src="https://github.com/user-attachments/assets/116edb3f-24af-460b-8b16-7a94118306dd" width="500"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ae99b0f8-0440-42a5-b84c-982390da0dc2" width="500"/>
+  <img src="https://github.com/user-attachments/assets/82c6ad67-3c3c-4f0d-9efa-4b13967bf456" width="500"/>
+</p>
 
 ### <p align="center">Disusun Oleh:</p> 
 
