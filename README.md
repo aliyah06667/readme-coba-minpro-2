@@ -471,11 +471,11 @@ Berikut widget utama yang digunakan dalam aplikasi:
 
 #### *Tampilan Light Mode*
   
-  <img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" />
+<p align="center"><img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" /></p>  
 
 #### *Tampilan Dark Mode*
   
-  <img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/808be766-461f-4f77-8c72-c9f230f40a68" />
+<p align="center"><img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/808be766-461f-4f77-8c72-c9f230f40a68" /></p> 
 
 <br>
 
@@ -483,41 +483,91 @@ Berikut widget utama yang digunakan dalam aplikasi:
 
 #### *Tampilan Light Mode*
 
-  <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/57adebfd-af3e-488a-acd3-c6cbbfcc697c" />
+<p align="center">
+   <img src="[https://github.com/user-attachments/assets/a8c87877-1100-405e-b830-b1ce89698a2c](https://github.com/user-attachments/assets/57adebfd-af3e-488a-acd3-c6cbbfcc697c)" width="100" style="border:2px solid #ddd; border-radius:10px;">
+</p>
 
 #### *Tampilan Dark Mode*
 
-  <img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/7abafb04-c4a5-4066-87ac-c33decc0301a" />
+<p align="center"><img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/7abafb04-c4a5-4066-87ac-c33decc0301a" /></p>
 
 ### 3. Halaman HomePage
 
 #### *Tampilan Light Mode*
 
+<p align="center"><img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/41aaec33-7a63-43e4-a2df-34bf2d154a8a" /></p>
 
 #### *Tampilan Dark Mode*
+
+<p align="center"><img width="1919" height="908" alt="Image" src="https://github.com/user-attachments/assets/7d16de9a-b5c8-49aa-9a59-c4f4ce9998a7" /></p>
 
 ### 4. Add Reservation Page
 
 #### *Tampilan Light Mode*
 
+<p align="center"><img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/82c6ad67-3c3c-4f0d-9efa-4b13967bf456" /></p>
+
 #### *Tampilan Dark Mode*
+
+<p align="center"><img width="1919" height="904" alt="Image" src="https://github.com/user-attachments/assets/0ab2ded1-9531-4255-9c86-57d719b54582" /></p>
 
 ### 4. Edit Reservation Page
 
 #### *Tampilan Light Mode*
 
+<p align="center"><img width="1919" height="905" alt="Image" src="https://github.com/user-attachments/assets/d3e0822a-3772-4e66-8717-6116a992b489" /></p>
+
 #### *Tampilan Dark Mode*
+
+<p align="center"><img width="1919" height="905" alt="Image" src="https://github.com/user-attachments/assets/b5b1f910-ae73-4a50-878e-2d2d19d1cd9e" /></p>
 
 ---
 
 ## 🗂 LANGKAH - LANGKAH PENGGUNAAN APLIKASI 
 
-**1. Masuk Halaman Login**
-Pada saat pertama kali masuk ke aplikasi, sistem akan memuat halaman login. Apabila belum memiliki akun, pengguna dapat langsung klik "Sign Up".
+### 1. Masuk Halaman Login
 
-**2. Masuk Halaman Register**
-Kemudian, pengguna akan diarahkan ke halaman register untuk membuat akun sebagai pengguna baru. Pengguna diminta untuk mengisi kolom berupa *textfield* yaitu email, password, dan confirm password, kolom password juga dilengkapi dengan fitur show/hide password. Setelah pengguna selesai mengisi data, tekan tombol "REGISTER" untuk menyimpan data.
+Pada saat pertama kali membuka aplikasi **Beauti-Fy Salon**, pengguna akan langsung diarahkan ke halaman login. Di sini, pengguna dapat memasukkan email dan password mereka untuk masuk.
 
-<img width="1442" height="869" alt="image" src="https://github.com/user-attachments/assets/018a8adc-0d65-45e7-8e74-6eef0c9a0b33" />
+<p align="center"><img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/19f69132-7938-4824-9595-c12c35543fef" /></p>
 
+Jika belum memiliki akun, pengguna cukup menekan tombol “Sign Up” dan akan diarahkan ke halaman pendaftaran akun baru. Terdapat fitur show/hide password sehingga pengguna bisa memastikan kata sandi yang diketik sudah benar.
 
+<p align="center"><img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/37f08454-b302-465a-93f6-2e28461550c6" /></p>/>
+
+### 2. Mendaftar di Halaman Register
+
+Setelah menekan “Sign Up”, pengguna akan masuk ke halaman register. Di halaman ini, pengguna diminta untuk mengisi beberapa kolom berupa email, password, dan konfirmasi password. 
+
+Setelah semua data diisi, pengguna menekan tombol “REGISTER”. Jika registrasi berhasil, aplikasi akan menampilkan pesan “Account successfully created” dan otomatis membawa pengguna kembali ke halaman login untuk masuk menggunakan akun baru mereka.
+
+### 3. Menjelajahi HomePage
+
+Begitu berhasil login, pengguna akan tiba di halaman utama atau *HomePage*. Tampilan pertama akan menampilkan teks "No Reservation Yet." karena pengguna belum membuat suatu reservasi.
+
+<p align="center"><img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/41aaec33-7a63-43e4-a2df-34bf2d154a8a" /></p>
+
+Di sini, semua reservasi yang pernah dibuat ditampilkan dalam bentuk daftar. Setiap kartu reservasi menampilkan nama pelanggan, kontak, layanan, tanggal, catatan, dan harga layanan. Pengguna bisa melihat seluruh reservasi dengan mudah dan rapi.
+
+Di HomePage, terdapat beberapa tombol aksi:
+- Tombol + untuk menambahkan reservasi baru
+- Tombol edit untuk memperbarui data reservasi
+- Tombol delete untuk menghapus reservasi
+- Tombol logout untuk keluar dari akun
+
+### 4. Menambahkan Reservasi Baru
+Saat pengguna menekan tombol +, mereka akan diarahkan ke halaman *AddPage*. Di sini, pengguna dapat mengisi form reservasi baru: nama pelanggan, kontak, layanan yang dipilih melalui dropdown, tanggal melalui DatePicker, catatan tambahan, dan harga layanan otomatis sesuai pilihan layanan. 
+
+Setelah semua data diisi, pengguna menekan tombol "BOOK APPOINTMENT". Jika berhasil, aplikasi akan menampilkan pesan “Reservation successfully created” dan kembali ke HomePage dengan daftar yang sudah diperbarui.
+
+### 5. Mengubah Reservasi yang Sudah Ada
+Jika ada data reservasi yang perlu diperbarui, pengguna cukup menekan tombol edit pada kartu reservasi yang bersangkutan. Aplikasi akan menampilkan form yang sudah terisi dengan data lama. Pengguna bisa mengubah informasi yang diperlukan dan menekan tombol UPDATE. Setelah berhasil, pesan “Data successfully updated” akan muncul, dan HomePage akan menampilkan data yang sudah diperbarui.
+
+### 6. Menghapus Reservasi
+Untuk menghapus reservasi, pengguna menekan tombol delete pada kartu reservasi. Aplikasi akan menampilkan dialog konfirmasi: jika pengguna menekan Cancel, proses penghapusan dibatalkan. Jika menekan Delete, data akan dihapus dari database, muncul pesan “Data successfully deleted”, dan daftar reservasi otomatis diperbarui.
+
+### 7. Mengubah Tema Tampilan
+Beauti-Fy Salon mendukung Light Mode dan Dark Mode. Pengguna dapat mengubah tema melalui tombol toggle di AppBar. Saat diganti, tampilan aplikasi akan berubah secara real-time sesuai pilihan pengguna.
+
+### 8. Logout
+Jika pengguna selesai menggunakan aplikasi, mereka dapat menekan tombol Logout di HomePage. Setelah itu, session Supabase akan dihapus dan pengguna akan kembali ke halaman login.
