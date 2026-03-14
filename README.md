@@ -471,55 +471,51 @@ Berikut widget utama yang digunakan dalam aplikasi:
 
 #### *Tampilan Light Mode*
   
-<p align="center"><img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" /></p>  
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" />
 
 #### *Tampilan Dark Mode*
   
-<p align="center"><img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/808be766-461f-4f77-8c72-c9f230f40a68" /></p> 
-
-<br>
+<img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/808be766-461f-4f77-8c72-c9f230f40a68" />
 
 ### 2. Halaman RegisterPage
 
 #### *Tampilan Light Mode*
 
-<p align="center">
-   <img src="[https://github.com/user-attachments/assets/a8c87877-1100-405e-b830-b1ce89698a2c](https://github.com/user-attachments/assets/57adebfd-af3e-488a-acd3-c6cbbfcc697c)" width="100" style="border:2px solid #ddd; border-radius:10px;">
-</p>
+<img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/116edb3f-24af-460b-8b16-7a94118306dd" />
 
 #### *Tampilan Dark Mode*
 
-<p align="center"><img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/7abafb04-c4a5-4066-87ac-c33decc0301a" /></p>
+<img width="1919" height="900" alt="Image" src="https://github.com/user-attachments/assets/63acceae-e680-45a0-a006-3d650bda3b9d" />
 
 ### 3. Halaman HomePage
 
 #### *Tampilan Light Mode*
 
-<p align="center"><img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/41aaec33-7a63-43e4-a2df-34bf2d154a8a" /></p>
+<img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/41aaec33-7a63-43e4-a2df-34bf2d154a8a" />
 
 #### *Tampilan Dark Mode*
 
-<p align="center"><img width="1919" height="908" alt="Image" src="https://github.com/user-attachments/assets/7d16de9a-b5c8-49aa-9a59-c4f4ce9998a7" /></p>
+<img width="1919" height="908" alt="Image" src="https://github.com/user-attachments/assets/7d16de9a-b5c8-49aa-9a59-c4f4ce9998a7" />
 
 ### 4. Add Reservation Page
 
 #### *Tampilan Light Mode*
 
-<p align="center"><img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/82c6ad67-3c3c-4f0d-9efa-4b13967bf456" /></p>
+<img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/82c6ad67-3c3c-4f0d-9efa-4b13967bf456" />
 
 #### *Tampilan Dark Mode*
 
-<p align="center"><img width="1919" height="904" alt="Image" src="https://github.com/user-attachments/assets/0ab2ded1-9531-4255-9c86-57d719b54582" /></p>
+<img width="1919" height="904" alt="Image" src="https://github.com/user-attachments/assets/0ab2ded1-9531-4255-9c86-57d719b54582" />
 
 ### 4. Edit Reservation Page
 
 #### *Tampilan Light Mode*
 
-<p align="center"><img width="1919" height="905" alt="Image" src="https://github.com/user-attachments/assets/d3e0822a-3772-4e66-8717-6116a992b489" /></p>
+<img width="1919" height="905" alt="Image" src="https://github.com/user-attachments/assets/d3e0822a-3772-4e66-8717-6116a992b489" />
 
 #### *Tampilan Dark Mode*
 
-<p align="center"><img width="1919" height="905" alt="Image" src="https://github.com/user-attachments/assets/b5b1f910-ae73-4a50-878e-2d2d19d1cd9e" /></p>
+<img width="1919" height="905" alt="Image" src="https://github.com/user-attachments/assets/b5b1f910-ae73-4a50-878e-2d2d19d1cd9e" />
 
 ---
 
@@ -533,25 +529,41 @@ Pada saat pertama kali membuka aplikasi **Beauti-Fy Salon**, pengguna akan langs
 
 Jika belum memiliki akun, pengguna cukup menekan tombol “Sign Up” dan akan diarahkan ke halaman pendaftaran akun baru. Terdapat fitur show/hide password sehingga pengguna bisa memastikan kata sandi yang diketik sudah benar.
 
-<p align="center"><img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/37f08454-b302-465a-93f6-2e28461550c6" /></p>/>
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/37f08454-b302-465a-93f6-2e28461550c6" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
 
 ### 2. Mendaftar di Halaman Register
 
-Setelah menekan “Sign Up”, pengguna akan masuk ke halaman register. Di halaman ini, pengguna diminta untuk mengisi beberapa kolom berupa email, password, dan konfirmasi password. 
+Setelah menekan “Sign Up”, pengguna akan masuk ke halaman register. 
 
-Setelah semua data diisi, pengguna menekan tombol “REGISTER”. Jika registrasi berhasil, aplikasi akan menampilkan pesan “Account successfully created” dan otomatis membawa pengguna kembali ke halaman login untuk masuk menggunakan akun baru mereka.
+<img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/116edb3f-24af-460b-8b16-7a94118306dd" />
+
+Di halaman ini, pengguna diminta untuk mengisi beberapa kolom berupa email, password, dan konfirmasi password. 
+
+<img width="1919" height="902" alt="Image" src="https://github.com/user-attachments/assets/378ee201-512b-4a28-8e12-97a18601af48" />
+
+Setelah semua data diisi, pengguna menekan tombol “REGISTER”.
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/21f6294b-a377-42b7-a32b-be4edccca9f7" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
+
+Jika registrasi berhasil, aplikasi akan menampilkan pesan “Account successfully created” dan otomatis membawa pengguna kembali ke halaman login untuk masuk menggunakan akun baru mereka.
+
+<img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/d4930069-4b31-48c9-96eb-31739b00a745" />
 
 ### 3. Menjelajahi HomePage
 
 Begitu berhasil login, pengguna akan tiba di halaman utama atau *HomePage*. Tampilan pertama akan menampilkan teks "No Reservation Yet." karena pengguna belum membuat suatu reservasi.
 
-<p align="center"><img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/41aaec33-7a63-43e4-a2df-34bf2d154a8a" /></p>
+<img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/41aaec33-7a63-43e4-a2df-34bf2d154a8a" />
 
 Di sini, semua reservasi yang pernah dibuat ditampilkan dalam bentuk daftar. Setiap kartu reservasi menampilkan nama pelanggan, kontak, layanan, tanggal, catatan, dan harga layanan. Pengguna bisa melihat seluruh reservasi dengan mudah dan rapi.
 
 <img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/ae99b0f8-0440-42a5-b84c-982390da0dc2" />
 
-Di HomePage, terdapat beberapa tombol aksi:
+Di *HomePage*, terdapat beberapa tombol aksi:
 - Tombol + untuk menambahkan reservasi baru
 - Tombol edit untuk memperbarui data reservasi
 - Tombol delete untuk menghapus reservasi
@@ -560,7 +572,9 @@ Di HomePage, terdapat beberapa tombol aksi:
 ### 4. Menambahkan Reservasi Baru
 Saat pengguna menekan tombol "+ Book Now" di pojok kanan bawah, 
 
-<img width="190" height="103" alt="Image" src="https://github.com/user-attachments/assets/13a4e65a-80cd-478d-91ca-40f214b7d036" />
+<p align="center">
+   <img src="Image" src="https://github.com/user-attachments/assets/13a4e65a-80cd-478d-91ca-40f214b7d036" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
 
 mereka akan diarahkan ke halaman *AddPage*. 
 
@@ -569,21 +583,29 @@ mereka akan diarahkan ke halaman *AddPage*.
 Di sini, pengguna dapat mengisi form reservasi baru berisi nama pelanggan, kontak, layanan yang dipilih melalui dropdown, tanggal melalui DatePicker, catatan tambahan, dan harga layanan otomatis sesuai pilihan layanan. 
 
 - Tampilan layanan melalui dropdown
+  
   <img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/b5e4e8d8-a95a-4aef-b9eb-3538f18b625a" />
 
 - Tampilan tanggal melalui DatePicker
+  
   <img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/fc3a3305-7a58-49a5-8d79-0e31d7144ea8" />  
 
-Setelah semua data diisi, pengguna menekan tombol "BOOK APPOINTMENT". Jika berhasil, aplikasi akan menampilkan pesan “Reservation successfully created” dan kembali ke HomePage dengan daftar yang sudah diperbarui.
+Setelah semua data diisi, pengguna menekan tombol "BOOK APPOINTMENT". 
 
-<img width="941" height="336" alt="Image" src="https://github.com/user-attachments/assets/8e9a89c4-f3b4-486e-b6b9-412537592279" />
+<p align="center">
+   <img src="Image" src="https://github.com/user-attachments/assets/8e9a89c4-f3b4-486e-b6b9-412537592279" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
+
+Jika berhasil, aplikasi akan menampilkan pesan “Reservation successfully created” dan kembali ke *HomePage* dengan daftar yang sudah diperbarui.
 
 <img width="1919" height="909" alt="Image" src="https://github.com/user-attachments/assets/dda202a2-eb45-4024-b018-13f570b6e0ca" />
 
 ### 5. Mengubah Reservasi yang Sudah Ada
 Jika ada data reservasi yang perlu diperbarui, pengguna cukup menekan tombol edit (✏️) pada kartu reservasi yang bersangkutan. 
 
-<img width="608" height="321" alt="Image" src="https://github.com/user-attachments/assets/eb328915-39cf-44ce-b62c-b6887e606a64" />
+<p align="center">
+   <img src="Image" src="https://github.com/user-attachments/assets/eb328915-39cf-44ce-b62c-b6887e606a64" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
 
 Aplikasi akan menampilkan form yang sudah terisi dengan data lama. 
 
@@ -591,16 +613,20 @@ Aplikasi akan menampilkan form yang sudah terisi dengan data lama.
 
 Pengguna bisa mengubah informasi yang diperlukan dan menekan tombol "UPDATE RESERVATION". 
 
-<img width="944" height="353" alt="Image" src="https://github.com/user-attachments/assets/fa2339b0-f090-4fed-b723-695a2cb2ec1c" />
+<p align="center">
+   <img src="Image" src="https://github.com/user-attachments/assets/fa2339b0-f090-4fed-b723-695a2cb2ec1c" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
 
-Setelah berhasil, pesan “Data successfully updated” akan muncul, dan HomePage akan menampilkan data yang sudah diperbarui.
+Setelah berhasil, pesan “Data successfully updated” akan muncul, dan *HomePage* akan menampilkan data yang sudah diperbarui.
 
 <img width="1919" height="906" alt="Image" src="https://github.com/user-attachments/assets/adec9577-7d2d-4e8b-a3d0-00f9a9967ac8" />
 
 ### 6. Menghapus Reservasi
 Untuk menghapus reservasi, pengguna menekan tombol delete (🗑️) pada kartu reservasi.
 
-<img width="608" height="321" alt="Image" src="https://github.com/user-attachments/assets/eb328915-39cf-44ce-b62c-b6887e606a64" />
+<p align="center">
+   <img src="Image" src="https://github.com/user-attachments/assets/eb328915-39cf-44ce-b62c-b6887e606a64" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
 
 Aplikasi akan menampilkan dialog konfirmasi jika pengguna menekan Cancel, proses penghapusan dibatalkan. 
 
@@ -611,7 +637,27 @@ Jika menekan Delete, data akan dihapus dari database, muncul pesan “Data succe
 <img width="1918" height="903" alt="Image" src="https://github.com/user-attachments/assets/1e8034db-46ed-4099-add8-72cbf0ed7d89" />
 
 ### 7. Mengubah Tema Tampilan
-Beauti-Fy Salon mendukung Light Mode dan Dark Mode. Pengguna dapat mengubah tema melalui tombol toggle di AppBar. Saat diganti, tampilan aplikasi akan berubah secara real-time sesuai pilihan pengguna.
+Beauti-Fy Salon mendukung Light Mode dan Dark Mode. Pengguna dapat mengubah tema melalui tombol toggle di AppBar. 
+
+<p align="center">
+   <img src="Image" src="https://github.com/user-attachments/assets/6cff8d4f-2949-4cf7-959a-f0676e40484e" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
+
+Saat diganti, tampilan aplikasi akan berubah secara real-time sesuai pilihan pengguna. Contohnya pada *HomePage* ini, 
+
+<img width="1919" height="907" alt="Image" src="https://github.com/user-attachments/assets/41aaec33-7a63-43e4-a2df-34bf2d154a8a" />
+
+<img width="1919" height="908" alt="Image" src="https://github.com/user-attachments/assets/7d16de9a-b5c8-49aa-9a59-c4f4ce9998a7" />
 
 ### 8. Logout
-Jika pengguna selesai menggunakan aplikasi, mereka dapat menekan tombol Logout di HomePage. Setelah itu, session Supabase akan dihapus dan pengguna akan kembali ke halaman login.
+Jika pengguna selesai menggunakan aplikasi, mereka dapat menekan tombol Logout di *HomePage*. 
+
+<p align="center">
+   <img src="Image" src="https://github.com/user-attachments/assets/6cff8d4f-2949-4cf7-959a-f0676e40484e" width="400" style="border:2px solid #ddd; border-radius:10px;">
+</p>
+
+
+
+<img width="1919" height="904" alt="Image" src="https://github.com/user-attachments/assets/ffa06b63-4143-4138-adf4-dbbee09a34a4" />
+
+Setelah itu, session Supabase akan dihapus dan pengguna akan kembali ke halaman *loginPage*.
