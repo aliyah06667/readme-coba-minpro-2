@@ -1,30 +1,171 @@
-## MINI PROJECT PEMOGRAMAN APLIKASI BERGERAK (2) "RESERVASI SALON"
+## <p align="center">MINI PROJECT PEMOGRAMAN APLIKASI BERGERAK (2) "RESERVASI SALON"</p>
 
-## BEAUTI-FY SALON
+## <p align="center">BEAUTI-FY SALON</p>
 
 <img width="1200" height="400" alt="beauti-fysalon img" src="https://github.com/user-attachments/assets/cfa42b6d-4117-47af-a00c-5bc3ce3750c5" />
 
 
-## Disusun Oleh: 
+### <p align="center">Disusun Oleh:</p> 
 
-Nama: Aliyah Azzah Sekedang
+<p align="center">Aliyah Azzah Sekedang</p> 
 
-NIM: 2409116021
+<p align="center">(2409116021)</p>
+
+
 
 ---
 
-## 🗂 DESKRIPSI APLIKASI
-**Beauti-Fy Salon** adalah aplikasi mobile berbasis Flutter yang digunakan untuk melakukan reservasi layanan salon secara digital. Aplikasi ini membantu pengguna dalam mencatat data booking layanan salon dengan mudah, cepat, dan terorganisir.
+## <p align="center">🗂 DESKRIPSI APLIKASI</p>
+**Beauti-Fy Salon** adalah aplikasi mobile berbasis Flutter untuk mengelola reservasi layanan salon secara digital. Aplikasi ini memungkinkan pengguna melakukan pencatatan dan pengelolaan data booking secara terstruktur melalui sistem CRUD (Create, Read, Update, Delete).
 
-Melalui aplikasi ini, pengguna dapat menambahkan data reservasi, melihat daftar appointment yang sudah dibuat, mengedit data jika terjadi perubahan, serta menghapus reservasi yang tidak diperlukan.
+Pengguna dapat melakukan login dan register menggunakan ***Supabase Authentication***, kemudian menambahkan, melihat, mengedit, dan menghapus data reservasi yang tersimpan pada database Supabase. Aplikasi ini dirancang dengan navigasi multi-halaman serta antarmuka modern untuk memberikan pengalaman penggunaan yang lebih efisien dan interaktif.
 
-Aplikasi ini dibuat untuk memenuhi tugas praktikum Flutter dengan menerapkan konsep dasar CRUD, form input, dan navigasi multi-halaman.
+---
+
+## 🗂 STRUKTUR FOLDER
+
+***1. main.dart***
+
+File utama aplikasi. Berfungsi untuk inisialisasi Supabase, mengatur routing awal, dan menjalankan aplikasi.
+
+***2. models/***
+
+Berisi struktur model data yang digunakan dalam aplikasi.
+
+- ***reservation.dart***
+
+  Model data yang mendefinisikan struktur reservasi yang terdiri dari beberapa field seperti id, name, contact, service, date, notes, dan price. Model ini digunakan untuk mempermudah pengelolaan dan pengiriman data antara form, halaman, dan service yang terhubung dengan Supabase.
+
+***3. services/***
+
+Berisi file yang menangani proses komunikasi antara aplikasi dengan database Supabase.
+
+- ***reservation_service.dart***
+
+  Bertanggung jawab untuk mengelola seluruh operasi CRUD (Create, Read, Update, Delete) ke database Supabase, yaitu:
+  - Create : Menambahkan data reservasi baru ke tabel reservations
+  - Read : Mengambil dan menampilkan seluruh data reservasi dari database
+  - Update : Memperbarui data reservasi berdasarkan id
+  - Delete : Menghapus data reservasi berdasarkan id
+    
+  File ini memisahkan logic database dari tampilan (UI) sehingga struktur kode menjadi lebih terorganisir dan mudah dikembangkan.
+
+***4. pages/***
+
+Berisi seluruh halaman (screen) dalam aplikasi.
+
+- ***login_page.dart***
+
+  Halaman autentikasi pengguna untuk masuk ke dalam aplikasi menggunakan email dan password melalui Supabase Auth. Dilengkapi dengan validasi input, fitur show/hide password, notifikasi login berhasil/gagal, serta navigasi ke halaman register.
+
+- ***register_page.dart***
+
+  Halaman pendaftaran akun baru menggunakan email dan password melalui Supabase Auth. Terdapat validasi minimal password dan notifikasi apabila registrasi berhasil atau gagal. Setelah berhasil, pengguna diarahkan kembali ke halaman login.
+
+- ***home_page.dart***
+  
+  Menampilkan daftar reservasi dan mengelola state data reservasi serta fitur-fitur yaitu Tambah data, Edit data dan Hapus data. Data ditampilkan langsung dari database Supabase.
+  
+- ***add_page.dart***
+  
+  Berisi form untuk menambahkan data reservasi baru menggunakan TextField, DropdownButtonFormField, dan showDatePicker. Data yang disimpan akan dikirim ke Supabase.
+  
+- ***edit_page.dart***
+  
+  Berfungsi untuk mengubah data reservasi yang sudah ada. Data lama akan otomatis terisi dan dapat diperbarui.
+
+
+## 🗂 FITUR APLIKASI
+1. Authentication System
+- Register (Membuat akun baru)
+- Login (Masuk ke akun)
+- Validasi email & password
+- Notifikasi jika login/register berhasil atau gagal
+
+2. Reservation Management (CRUD)
+- Create
+  Pengguna dapat menambahkan data reservasi baru.
+- Read
+  Pengguna dapat melihat daftar seluruh reservasi yang tersimpan.
+- Update
+  Pengguna dapat mengedit data reservasi yang sudah ada.
+- Delete
+  Pengguna dapat menghapus data reservasi.
+
+Setiap aksi Create, Update, dan Delete akan menampilkan notifikasi seperti "Data successfully created", "Data successfully updated", dan "Data successfully deleted".
+
+3. Modern UI Design
+- Glassmorphism effect
+- Blur background
+- Custom gradient navbar
+- Dark mode toggle
+- Smooth animation (fade & scale)
+
+4. Notification System
+Menggunakan SnackBar untuk memberikan feedback ke pengguna:
+- Error input
+- Success message
+- Invalid login
+- Data operation success
+
+---
+
+## 🗂 WIDGET YANG DIGUNAKAN
+Berikut widget utama yang digunakan dalam aplikasi:
+
+**1. Layout & Structure**
+   - Scaffold
+   - Stack
+   - Container
+   - Column
+   - Row
+   - Center
+   - Align
+   - Positioned
+   - SizedBox
+
+2. Input & Form
+- TextField
+- TextEditingController
+- InputDecoration
+- IconButton
+
+3. Button
+- ElevatedButton
+- TextButton
+- GestureDetector
+
+4. Visual & UI Effects
+- AnimatedContainer
+- FadeTransition
+- ScaleTransition
+- BackdropFilter
+- ClipRRect
+- BoxDecoration
+- LinearGradient
+- BoxShadow
+- CircularProgressIndicator
+
+5. Navigation
+- Navigator.push
+- Navigator.pushReplacement
+- Navigator.pop
+
+6. Backend Integration
+- Supabase.instance.client.auth.signUp
+- Supabase.instance.client.auth.signInWithPassword
 
 ---
 
 ## 🗂 TAMPILAN APLIKASI
 
 **1. Halaman Login**
+- Background image dengan overlay gradient
+- Glassmorphism login card
+- Input email & password
+- Toggle show/hide password
+- Dark mode button
+- Tombol Sign Up
 
 - ***Tampilan Light Mode***
   
