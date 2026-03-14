@@ -7,7 +7,7 @@
 ### <p align="center">Preview</p> 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" width="500"/>
+  <img src="https://github.com/user-attachments/assets/a95a1a91-4c8f-4c47-b232-5211d9880ee4" width="500"/>
   <img src="https://github.com/user-attachments/assets/116edb3f-24af-460b-8b16-7a94118306dd" width="500"/>
 </p>
 
@@ -482,7 +482,7 @@ Berikut widget utama yang digunakan dalam aplikasi:
 
 #### *Tampilan Light Mode*
   
-<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/9c097f79-7680-4e2f-ba4b-c4b1b2d2e892" />
+<img width="1919" height="905" alt="image" src="https://github.com/user-attachments/assets/a95a1a91-4c8f-4c47-b232-5211d9880ee4" />
 
 #### *Tampilan Dark Mode*
   
