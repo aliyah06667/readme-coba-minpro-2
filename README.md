@@ -11,8 +11,6 @@
 
 <p align="center">(2409116021)</p>
 
-
-
 ---
 
 ## 🗂 DESKRIPSI APLIKASI
@@ -32,7 +30,7 @@ File utama aplikasi. Berfungsi untuk inisialisasi Supabase, mengatur routing awa
 
 Berisi struktur model data yang digunakan dalam aplikasi.
 
-- ***reservation.dart***
+- #### *reservation.dart*
 
   Model data yang mendefinisikan struktur reservasi yang terdiri dari beberapa field seperti id, name, contact, service, date, notes, dan price. Model ini digunakan untuk mempermudah pengelolaan dan pengiriman data antara form, halaman, dan service yang terhubung dengan Supabase.
 
@@ -40,7 +38,7 @@ Berisi struktur model data yang digunakan dalam aplikasi.
 
 Berisi file yang menangani proses komunikasi antara aplikasi dengan database Supabase.
 
-- ***reservation_service.dart***
+- #### *reservation_service.dart*
 
   Bertanggung jawab untuk mengelola seluruh operasi CRUD (Create, Read, Update, Delete) ke database Supabase, yaitu:
   - Create : Menambahkan data reservasi baru ke tabel reservations
@@ -54,23 +52,23 @@ Berisi file yang menangani proses komunikasi antara aplikasi dengan database Sup
 
 Berisi seluruh halaman (screen) dalam aplikasi.
 
-- ***login_page.dart***
+- #### *login_page.dart*
 
   Halaman autentikasi pengguna untuk masuk ke dalam aplikasi menggunakan email dan password melalui Supabase Auth. Dilengkapi dengan validasi input, fitur show/hide password, notifikasi login berhasil/gagal, serta navigasi ke halaman register.
 
-- ***register_page.dart***
+- #### *register_page.dart*
 
   Halaman pendaftaran akun baru menggunakan email dan password melalui Supabase Auth. Terdapat validasi minimal password dan notifikasi apabila registrasi berhasil atau gagal. Setelah berhasil, pengguna diarahkan kembali ke halaman login.
 
-- ***home_page.dart***
+- #### *home_page.dart*
   
   Menampilkan daftar reservasi dan mengelola state data reservasi serta fitur-fitur yaitu Tambah data, Edit data dan Hapus data. Data ditampilkan langsung dari database Supabase.
   
-- ***add_page.dart***
+- #### *add_page.dart*
   
   Berisi form untuk menambahkan data reservasi baru menggunakan TextField, DropdownButtonFormField, dan showDatePicker. Data yang disimpan akan dikirim ke Supabase.
   
-- ***edit_page.dart***
+- #### *edit_page.dart*
   
   Berfungsi untuk mengubah data reservasi yang sudah ada. Data lama akan otomatis terisi dan dapat diperbarui.
 
