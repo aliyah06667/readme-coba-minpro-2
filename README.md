@@ -24,11 +24,11 @@ Pengguna dapat melakukan login dan register menggunakan ***Supabase Authenticati
 
 ## 🗂 STRUKTUR FOLDER
 
-***1. main.dart***
+### *1. main.dart*
 
 File utama aplikasi. Berfungsi untuk inisialisasi Supabase, mengatur routing awal, dan menjalankan aplikasi.
 
-***2. models/***
+### *2. models/*
 
 Berisi struktur model data yang digunakan dalam aplikasi.
 
@@ -36,7 +36,7 @@ Berisi struktur model data yang digunakan dalam aplikasi.
 
   Model data yang mendefinisikan struktur reservasi yang terdiri dari beberapa field seperti id, name, contact, service, date, notes, dan price. Model ini digunakan untuk mempermudah pengelolaan dan pengiriman data antara form, halaman, dan service yang terhubung dengan Supabase.
 
-***3. services/***
+### *3. services/*
 
 Berisi file yang menangani proses komunikasi antara aplikasi dengan database Supabase.
 
@@ -50,7 +50,7 @@ Berisi file yang menangani proses komunikasi antara aplikasi dengan database Sup
     
   File ini memisahkan logic database dari tampilan (UI) sehingga struktur kode menjadi lebih terorganisir dan mudah dikembangkan.
 
-***4. pages/***
+### *4. pages/*
 
 Berisi seluruh halaman (screen) dalam aplikasi.
 
@@ -74,14 +74,24 @@ Berisi seluruh halaman (screen) dalam aplikasi.
   
   Berfungsi untuk mengubah data reservasi yang sudah ada. Data lama akan otomatis terisi dan dapat diperbarui.
 
+---
 
 ## 🗂 FITUR APLIKASI
 
-**Aplikasi Beauti-Fy Salon** memiliki beberapa fitur utama yang terbagi ke dalam LoginPage, RegisterPage, HomePage, AddPage, dan EditPage. Pada bagian ini dijelaskan fitur-fotur yang tersedia serta bagaimana fitur tersebut diimplementasikan di dalam kode program dan integrasinya dengan Supabase.
+**Beauti-Fy Salon** memiliki beberapa fitur utama yang terbagi ke dalam *LoginPage*, *RegisterPage*, *HomePage*, *AddPage*, *EditPage*, serta sistem pendukung seperti *Theme Management*, *Loading State*, dan *Error Handling*. Pada bagian ini dijelaskan fitur-fitur yang tersedia serta bagaimana fitur tersebut diimplementasikan di dalam kode program dan integrasinya dengan Supabase.
 
-**1. LoginPage**
+### 1. LoginPage
 
-LoginPage merupakan halaman awal aplikasi yang berfungsi sebagai sistem autentikasi pengguna sebelum dapat mengakses fitur utama aplikasi. Halaman ini menggunakan StatefulWidget karena terdapat perubahan state seperti loading indicator dan toggle visibility password.
+*LoginPage* merupakan halaman awal aplikasi yang berfungsi sebagai sistem autentikasi pengguna sebelum dapat mengakses fitur utama aplikasi. Halaman ini menggunakan **StatefulWidget** karena terdapat perubahan state seperti loading indicator dan toggle visibility password.
+
+🔹 Fitur:
+- Input email dan password
+- Validasi form (tidak boleh kosong)
+- Show / Hide password
+- Login menggunakan Supabase Auth
+- Loading indicator saat proses login
+- Notifikasi berhasil / gagal
+- Navigasi ke RegisterPage
 
 Controller yang digunakan:
 
@@ -113,6 +123,274 @@ Jika login berhasil:
 
 Jika gagal:
 - Menampilkan pesan error menggunakan SnackBar
+
+### 2. RegisterPage
+
+RegisterPage digunakan untuk membuat akun baru menggunakan Supabase Authentication. Halaman ini juga menggunakan StatefulWidget karena membutuhkan validasi input dan loading state.
+
+🔹 Fitur:
+- Input email dan password
+- Validasi form (tidak boleh kosong)
+- Show / Hide password
+- Register menggunakan Supabase Auth
+- Loading indicator saat proses regist
+- Notifikasi berhasil / gagal
+- Navigasi ke LoginPage
+  
+Proses registrasi dilakukan menggunakan:
+
+~~~ Javascript
+await Supabase.instance.client.auth.signUp(
+  email: emailController.text.trim(),
+  password: passwordController.text.trim(),
+);
+~~~
+
+Validasi dilakukan sebelum proses register:
+- Email tidak boleh kosong
+- Password minimal 6 karakter
+
+Jika registrasi berhasil:
+- Menampilkan SnackBar "Account successfully created"
+- Kembali ke *LoginPage*
+
+### 3. HomePage
+
+*HomePage* merupakan halaman utama setelah pengguna berhasil login. Halaman ini menampilkan seluruh data reservasi yang diambil dari database Supabase. Halaman ini menggunakan StatefulWidget karena data bersifat dinamis dan berubah setelah operasi CRUD.
+
+🔹 Fitur:
+- Menampilkan seluruh data reservasi dari Supabase
+- Loading indicator saat mengambil data
+- Error handling jika gagal load data
+- Tombol tambah data
+- Tombol edit data
+- Tombol delete data
+- Logout
+- Menampilkan harga layanan
+- Refresh otomatis setelah melakukan CRUD
+
+Data tidak disimpan dalam List lokal statis, tetapi diambil dari Supabase menggunakan:
+
+~~~ Javascript
+final data = await supabase.from('reservations').select();
+~~~
+
+Data kemudian ditampilkan menggunakan ListView.builder.
+
+Setiap item reservasi menampilkan atribut:
+- name
+- contact
+- service
+- date
+- notes
+- price
+
+Perubahan data diperbarui menggunakan setState() agar tampilan otomatis refresh setelah create, update, atau delete.
+
+ #### a. Menampilkan Data (Read)
+
+Data diambil melalui ReservationService:
+
+~~~ Javascript
+Future<List> getReservations() async {
+  final data = await supabase.from('reservations').select();
+  return data;
+}
+~~~
+
+Loading state ditampilkan menggunakan CircularProgressIndicator saat data sedang dimuat.
+
+#### b. Tombol Tambah Data
+
+Pada bagian bawah halaman terdapat tombol FloatingActionButton untuk menambahkan reservasi baru.
+
+~~~ Javascript
+FloatingActionButton(
+  onPressed: () {
+    Navigator.push(...);
+  },
+)
+~~~
+
+Tombol ini mengarahkan pengguna ke *AddPage*.
+
+#### c. Tombol Edit
+
+Setiap item memiliki tombol edit yang akan mengirimkan data lama ke EditPage melalui parameter constructor.
+
+Navigasi dilakukan menggunakan:
+
+~~~ Javascript
+Navigator.push(
+  context,
+  MaterialPageRoute(
+    builder: (_) => EditPage(reservation: selectedData),
+  ),
+);
+~~~
+
+#### d. Tombol Delete
+
+Penghapusan data dilakukan menggunakan method delete pada service:
+
+~~~ Javascript
+await supabase.from('reservations').delete().eq('id', id);
+~~~
+
+Setelah berhasil:
+- Data di-refresh
+- Menampilkan SnackBar "Data successfully deleted"
+
+#### e. Logout
+
+Logout dilakukan menggunakan:
+
+~~~ Javascript
+await Supabase.instance.client.auth.signOut();
+~~~
+
+Setelah logout:
+- Kembali ke *LoginPage*
+
+### 4. AddPage (Create Reservation)
+
+*AddPage* digunakan untuk menambahkan data reservasi baru ke database Supabase.
+
+Komponen form yang digunakan:
+- `TextField` untuk name, contact, notes
+- `DropdownButtonFormField` untuk memilih service
+- `showDatePicker()` untuk memilih tanggal
+
+Contoh implementasi DatePicker:
+
+~~~ Javascript
+final pickedDate = await showDatePicker(
+  context: context,
+  initialDate: DateTime.now(),
+  firstDate: DateTime(2023),
+  lastDate: DateTime(2100),
+);
+~~~
+
+Harga layanan otomatis ditentukan berdasarkan pilihan service.
+
+Data dikirim ke Supabase melalui:
+
+~~~ Javascript
+await supabase.from('reservations').insert({
+  'name': name,
+  'contact': contact,
+  'service': service,
+  'date': date,
+  'notes': notes,
+  'price': price,
+});
+~~~
+
+Jika berhasil:
+- Menampilkan "Data successfully created"
+- Kembali ke *HomePage*
+
+### 5. EditPage (Update Reservation)
+
+EditPage digunakan untuk memperbarui data reservasi yang sudah ada.
+
+Data lama dikirim dari HomePage dan diinisialisasi ke dalam controller:
+
+~~~ Javascript
+nameController.text = widget.reservation['name'];
+~~~
+
+Proses update dilakukan menggunakan:
+
+~~~ Javascript
+await supabase
+  .from('reservations')
+  .update({
+    'name': name,
+    'contact': contact,
+    'service': service,
+    'date': date,
+    'notes': notes,
+    'price': price,
+  })
+  .eq('id', id);
+~~~
+
+Jika berhasil:
+- Menampilkan "Data successfully updated"
+- Kembali ke *HomePage*
+- Data otomatis diperbarui
+
+### 6. ReservationService (Database Layer)
+
+File reservation_service.dart berfungsi sebagai pemisah antara UI dan database logic.
+
+Class utama:
+
+~~~ Javascript
+class ReservationService {
+  final supabase = Supabase.instance.client;
+}
+~~~
+
+Berisi method:
+- `addReservation()` : Create
+- `getReservations()` : Read
+- `updateReservation()` : Update
+- `deleteReservation()` : Delete
+
+Pendekatan ini membuat arsitektur aplikasi lebih modular dan sesuai prinsip separation of concerns.
+
+### 7. Dark Mode & Light Mode
+
+Aplikasi mendukung perubahan tema tampilan.
+
+🔹 Fitur:
+- Toggle Light Mode
+- Toggle Dark Mode
+- Tampilan berubah secara real-time
+
+Implementasi menggunakan ThemeMode pada MaterialApp:
+
+~~~ Javascript
+themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
+~~~
+
+State theme dikontrol menggunakan setState().
+
+### 8. Loading State & Error Handling
+
+Setiap proses asynchronous dibungkus dalam try-catch:
+
+~~~ Javascript
+try {
+  ...
+} catch (e) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    SnackBar(content: Text(e.toString())),
+  );
+}
+~~~
+
+Loading indicator menggunakan:
+
+~~~ Javascript
+if (isLoading)
+  CircularProgressIndicator()
+~~~
+
+Hal ini memastikan aplikasi tetap responsif dan informatif saat terjadi proses atau kesalahan.
+
+### 9. Database Supabase
+
+Seluruh data:
+- Disimpan di database Supabase
+- Tidak menggunakan List lokal
+- Menggunakan tabel `reservations`
+- Dikelola melalui `ReservationService`
+
+Struktur ini menerapkan konsep separation of concerns dengan memisahkan UI dan database logic.
 
 ---
 
